@@ -54,31 +54,66 @@
           >
         </div>
         <div class="header__right">
-          <div class="header__right-image">
-            <img src="./images/jb-img.png" alt="Header Image" />
+          <div class="player">
+            <div class="wrapper">
+              <div class="info">
+                <div class="now-playing">Playing x of y</div>
+                <div class="track-name">Track Name</div>
+              </div>
+
+              <div class="slider__container">
+                <div class="current-time">00:00</div>
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="0"
+                  class="seek-slider"
+                  onchange="seekTo()"
+                />
+                <div class="total-duration">00:00</div>
+              </div>
+
+              <div class="slider__container">
+                <i class="uil uil-volume-down"></i>
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="99"
+                  class="volume-slider"
+                  onchange="setVolume()"
+                />
+                <i class="uil uil-volume"></i>
+              </div>
+
+              <div class="media-buttons">
+                <div class="prev-track" onclick="prevTrack()">
+                  <i class="uil uil-previous"></i>
+                </div>
+                <div class="playpause-track" onclick="playPauseTrack()">
+                  <i class="uil uil-play"></i>
+                </div>
+                <div class="next-track" onclick="nextTrack()">
+                  <i class="uil uil-step-forward"></i>
+                </div>
+              </div>
+
+              <div id="wave">
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </header>
     <!------- End of Header ---------->
-
-    <section class="container catalog__container">
-      <h2>Loft.Entertainment.</h2>
-      <div>
-        <article class="track">
-          <div class="icon">
-            <img src="./images/flower-img.jpg" alt="Flower Bomb Image" />
-          </div>
-          <div class="track__info">
-            <h5>Flower Bomb</h5>
-            <audio controls play pause volume>
-              <source src="./audio/Flowerbomb.opus" type="audio/opus" />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-        </article>
-      </div>
-    </section>
 
     <script src="./main.js"></script>
   </body>

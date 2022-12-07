@@ -167,3 +167,131 @@ header {
   height: 100%;
   object-fit: cover;
 }
+
+/*=========== Music Player ============*/
+
+.player {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper {
+  border: 1px solid transparent;
+  padding: 1.8rem;
+  border-radius: 1.2rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.now-playing {
+  font-size: 1rem;
+}
+
+.track-name {
+  font-size: 2.5rem;
+}
+
+.media-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1.8rem;
+  color: var(--color-light);
+}
+
+.active {
+  color: var(--color-black);
+}
+
+.playpause-track,
+.prev-track,
+.next-track {
+  padding: 1.5rem;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover {
+  opacity: 1;
+}
+
+.slider__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seek-slider,
+.volume-slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: var(--color-bg-secondary);
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.seek-slider::-webkit-slider-thumb,
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  background: var(--color-light);
+  border: 3px solid var(--color-primary);
+  cursor: pointer;
+  border-radius: 80%;
+}
+
+.seek-slider:hover,
+.volume-slider:hover {
+  opacity: 1;
+}
+
+.seek-slider {
+  width: 60%;
+}
+
+.volume-slider {
+  width: 30%;
+}
+
+.current-time,
+.total-duration {
+  padding: 0.6rem;
+}
+
+i.uil uil-volume-down,
+i.uil uil-volume {
+  padding: 0.6rem;
+}
+
+i,
+i.uil uil-previous,
+i.uil uil-play,
+i.uil uil-step-forward {
+  cursor: pointer;
+}
+
+.stroke {
+  background: var(--color-light);
+  height: 150%;
+  width: 0.6rem;
+  border-radius: 3rem;
+  margin: 0rem 3rem;
+  animation: animate 1.4s linear infinite;
+}
